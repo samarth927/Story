@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative; /* Added for positioning the button */
+}
+
+h1 {
+    color: #007acc;
+    margin: 20px 0;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#modeToggle, #autoscrollToggle {
+    position: absolute; /* Positioning the button */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007acc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition */
+}
+
+#modeToggle:hover, #autoscrollToggle:hover {
+    background-color: #005f99;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+input[type="file"] {
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #007acc;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+input[type="file"]:hover {
+    border-color: #005f99;
+}
+
+#mangaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.mangaPage {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.mangaPage:hover {
+    transform: scale(1.02);
+}
+
+.mangaPage img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Night mode styles */
+body.night-mode {
+    background: #333;
+    color: #f0f0f0;
+}
+
+body.night-mode h1 {
+    color: #f0f0f0;
+}
+
+body.night-mode input[type="file"] {
+    border-color: #f0f0f0;
+}
+
+body.night-mode .mangaPage {
+    border-color: #f0f0f0;
+}

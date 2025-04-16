@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manga Reader</title>
+    <link rel="stylesheet" href="manga.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</head>
+<body>
+    <h1>Manga Reader</h1>
+    <div style="display: flex; justify-content: space-between; width: 100%; position: absolute; top: 20px;">
+        <button id="autoscrollToggle">Start Autoscroll</button>
+        <button id="modeToggle">Switch to Night Mode</button>
+    </div>
+    <input type="file" id="imageUpload" accept="application/pdf" />
+    <div id="mangaContainer"></div>
+
+    <script src="manga.js"></script>
+</body>
+</html>
